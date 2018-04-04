@@ -5,7 +5,7 @@ int throttlePin = 0;
  
 void setup()
 {
-  esc.attach(9);
+  esc.attach(3);
   Serial.begin(9600);
 }
  
