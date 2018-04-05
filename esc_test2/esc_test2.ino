@@ -1,4 +1,5 @@
 #include <Servo.h>
+#include <PID_v1.h>
 
 #define NUM_ESCS 4
 
@@ -36,7 +37,7 @@ void initializeMotor(Servo esc[]){
   }
   delay(3000);
   for (int i = 0; i < NUM_ESCS; i++){
-    esc[i].write(85);
+    esc[i].write(75);
   }
   delay(5000);
   for (int i = 0; i < NUM_ESCS; i++){
