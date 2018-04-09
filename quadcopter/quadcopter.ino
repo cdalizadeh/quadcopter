@@ -13,9 +13,9 @@
 
 #define NUM_MOTORS 4
 
-#define ESC1_PIN 3
+#define ESC1_PIN 10
 #define ESC2_PIN 9
-#define ESC3_PIN 10
+#define ESC3_PIN 3
 #define ESC4_PIN 11
 
 #define X_KP 10
@@ -163,10 +163,10 @@ void loop()
 /* FUNCTIONS */
 
 void changeSpeeds(){
-  esc[0].write(BASE_THROTTLE + x_control + y_control);
-  esc[1].write(BASE_THROTTLE + x_control - y_control);
-  esc[2].write(BASE_THROTTLE - x_control + y_control);
-  esc[3].write(BASE_THROTTLE - x_control - y_control);
+  esc[0].write(BASE_THROTTLE - x_control - y_control);
+  esc[1].write(BASE_THROTTLE - x_control + y_control);
+  esc[2].write(BASE_THROTTLE + x_control + y_control);
+  esc[3].write(BASE_THROTTLE + x_control - y_control);
   
 
   
